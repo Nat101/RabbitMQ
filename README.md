@@ -2,16 +2,20 @@
 
 # Installation Notes
 You need to have the RabbitMQ server installed, please see the installation guide or use the community Docker image.
-   installation guide: https://www.rabbitmq.com/docs/download
+   
    community Docker image: https://hub.docker.com/_/rabbitmq/
-You may need to first install Erlang
-      If you initially get this error:
-         TCP connection succeeded but Erlang distribution failed
-         * suggestion: check if the Erlang cookie is identical for all server nodes and CLI tools
-            Note: https://stackoverflow.com/questions/9673172/rabbitmq-erlang-how-to-make-sure-the-erlang-cookies-are-the-same
-         * suggestion: check if all server nodes and CLI tools use consistent hostnames when addressing each other
-         * suggestion: check if inter-node connections may be configured to use TLS. If so, all nodes and CLI tools must do that
-         * suggestion: see the CLI, clustering and networking guides on https://rabbitmq.com/documentation.html to learn more
+      For this project I used docker and ran the following build command:
+         docker run -d --hostname rabbitmq-server --name rabbitmq-server -p 5672:5672 -p 15672:15672 rabbitmq:4.0-management
+         
+   installation guide: https://www.rabbitmq.com/docs/download
+      You may need to first install Erlang
+            If you initially get this error:
+               TCP connection succeeded but Erlang distribution failed
+               * suggestion: check if the Erlang cookie is identical for all server nodes and CLI tools
+                  Note: https://stackoverflow.com/questions/9673172/rabbitmq-erlang-how-to-make-sure-the-erlang-cookies-are-the-same
+               * suggestion: check if all server nodes and CLI tools use consistent hostnames when addressing each other
+               * suggestion: check if inter-node connections may be configured to use TLS. If so, all nodes and CLI tools must do that
+               * suggestion: see the CLI, clustering and networking guides on https://rabbitmq.com/documentation.html to learn more
 
 
 # Instructions for running program 
