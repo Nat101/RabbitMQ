@@ -1,10 +1,13 @@
 # RabbitMQ
+A demo program of the RabbitMQ Message Broker 
+
+Project dependencies are managed via Pipenv.  See https://pipenv.pypa.io for more information or troubleshooting.ex
 
 # Installation Notes
 You need to have the RabbitMQ server installed, please see the installation guide or use the community Docker image.
    
    community Docker image: https://hub.docker.com/_/rabbitmq/
-      For this project I used docker and ran the following build command:
+      Note: For my own install I used docker and ran the following build command:
          docker run -d --hostname rabbitmq-server --name rabbitmq-server -p 5672:5672 -p 15672:15672 rabbitmq:4.0-management
          
    installation guide: https://www.rabbitmq.com/docs/download
